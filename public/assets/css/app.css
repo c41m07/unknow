@@ -1,0 +1,109 @@
+/* DA Nova Empire */
+:root{
+    --space-900:#0B1430;
+    --space-850:#0e1a3d;
+    --space-800:#12204b;
+    --space-700:#172a63;
+    --card:#1A223A;
+    --card-2:#1e2846;
+    --primary:#3da5ff;
+    --primary-200:#8ecbff;
+    --muted:#8a94b0;
+    --success:#3ddc97;
+    --warning:#ffd166;
+    --danger:#ff6b6b;
+    --radius:16px;
+}
+html,body{height:100%}
+.bg-space{
+    background: radial-gradient(1200px 900px at -10% -10%, #10245a 0%, transparent 60%) , linear-gradient(0deg, var(--space-900), var(--space-900));
+    color:#e9eefb;
+}
+
+a, .btn-link{color:var(--primary)}
+a:hover{color:var(--primary-200)}
+
+.bg-topbar{ background: linear-gradient(0deg, var(--space-800), var(--space-800)); }
+
+.sidebar{
+    background: linear-gradient(180deg, var(--space-850), var(--space-800));
+    border-right: 1px solid rgba(255,255,255,.06);
+}
+.sidebar .brand{font-size:1.05rem}
+.sidebar .sidebar-group{
+    font-size:.75rem; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); margin:6px 0 4px;
+}
+.sidebar .nav-link{
+    color:#e9eefb; border-radius:10px; padding:.55rem .8rem; margin:.15rem 0;
+    display:flex; align-items:center;
+}
+.sidebar .nav-link i{opacity:.85}
+.sidebar .nav-link:hover{ background:rgba(255,255,255,.06) }
+.sidebar .nav-link.active{ background:rgba(61,165,255,.18); color:#fff }
+.sidebar .disabled-link{ color:rgba(233,238,251,.45) }
+
+.card{
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,.06);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 18px rgba(0,0,0,.25);
+}
+
+.pill{
+    display:inline-block; padding:.15rem .5rem; border-radius:999px; font-size:.85rem;
+    background:#cfe8ff;
+}
+.pill-dark{
+    background:rgba(255,255,255,.08); color:#e9eefb; border:1px solid rgba(255,255,255,.08);
+    padding:.15rem .5rem; border-radius:999px; font-size:.85rem;
+}
+
+.resource-bar{
+    display:grid; gap:12px; grid-template-columns:repeat(4, minmax(180px,1fr));
+}
+.resource-chip{
+    background: var(--card-2); border:1px solid rgba(255,255,255,.06);
+    border-radius: 14px; padding:10px 14px; display:flex; align-items:center; justify-content:space-between;
+}
+.resource-chip .label{ color: var(--muted); font-size:.9rem }
+.resource-chip .value{ font-weight:700; }
+
+/* Building rows */
+.build-row{
+    display:flex; align-items:center; gap:14px; padding:14px;
+    border:1px solid rgba(255,255,255,.06); border-radius:14px; background: var(--card-2);
+}
+.build-thumb{
+    width:56px; height:56px; border-radius:12px;
+    background: radial-gradient(60% 70% at 30% 30%, #5fa8ff 0%, #2e62a4 60%, #1a2a48 100%);
+    border:1px solid rgba(255,255,255,.08);
+}
+.build-title{ font-weight:600 }
+.build-meta{ color: var(--muted); font-size:.9rem }
+.build-cost{ color:#cfe8ff }
+
+.btn-outline-light{
+    border-color: rgba(255,255,255,.25);
+}
+.btn-outline-light:hover{
+    background:rgba(255,255,255,.1);
+}
+
+/* planet preview (dashboard) */
+.planet-frame{
+    background: var(--card-2);
+    border:1px solid rgba(255,255,255,.06);
+    border-radius: var(--radius);
+    padding:14px;
+}
+.planet-img{
+    width:100%; aspect-ratio: 16/10; border-radius:12px;
+    background: radial-gradient(40% 50% at 40% 50%, #f0d6b8 0%, #a67d5b 40%, #4b372b 70%, #000 100%);
+    box-shadow: inset -80px -40px 120px rgba(0,0,0,.6);
+}
+.stat-cards{ display:grid; gap:12px; grid-template-columns: repeat(3, minmax(160px,1fr)); }
+.stat-card{ background: var(--card-2); border:1px solid rgba(255,255,255,.06); border-radius:14px; padding:12px 14px; }
+
+hr.border-secondary{ border-color: rgba(255,255,255,.08)!important; }
+.text-secondary{ color: var(--muted)!important; }
